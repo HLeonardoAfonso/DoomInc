@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+    Vector3 airMove;
 
     void OnEnable()
     {
@@ -41,11 +42,22 @@ public class PlayerMovement : MonoBehaviour
         // Movement input
         Vector2 input = moveAction.ReadValue<Vector2>();
         Vector3 move = transform.right * input.x + transform.forward * input.y;
-        controller.Move(move * speed * Time.deltaTime);
-
-        if (jumpAction.triggered && isGrounded)
+        
+        // If grounded, update movement normally
+        if (isGrounded)
         {
-            // v = sqrt(h * -2 * g)
+            airMove = move; // store movement direction
+            controller.Move(move * speed * Time.deltaTime);
+        }
+        else
+        {
+            // In air: use stored direction only
+            controller.Move(airMove * speed * Time.deltaTime);
+        }
+
+        // Jump
+        if (jumpAction.IsPressed() && isGrounded)
+        {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
