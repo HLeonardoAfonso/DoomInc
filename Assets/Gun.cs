@@ -5,6 +5,7 @@ public class Gun : MonoBehaviour
 {
     public float damage = 10f;
     public float range = 100f;
+    public float bullets = 10f;
 
     public float fireRate = 15f;
     public float impactForce = 30f;
@@ -33,10 +34,16 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        if (shootAction.IsPressed() && Time.time >= nextTimeToFire)
+        if (shootAction.IsPressed() && Time.time >= nextTimeToFire && bullets > 0)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
+            bullets--;
+            //play sound effect here
+        }
+        else if (shootAction.IsPressed() && bullets <= 0)
+        {
+            // play empty magazine sound effect here
         }
     }
 
