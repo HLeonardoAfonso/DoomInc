@@ -14,7 +14,17 @@ public class Gun : MonoBehaviour
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
+    
     InputAction shootAction;
+
+    public AudioClip emptyMagazineSound;
+    public AudioClip shootSound;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Awake()
     {
@@ -34,16 +44,17 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        if (shootAction.IsPressed() && Time.time >= nextTimeToFire && bullets > 0)
+        if (shootAction.IsPressed() && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
-            Shoot();
-            bullets--;
-            //play sound effect here
-        }
-        else if (shootAction.IsPressed() && bullets <= 0)
-        {
-            // play empty magazine sound effect here
+            if (bullets <= 0)
+            {
+                audioSource.PlayOneShot(emptyMagazineSound);
+            } else {
+                Shoot();
+                bullets--;
+                audioSource.PlayOneShot(shootSound);
+            }
         }
     }
 
