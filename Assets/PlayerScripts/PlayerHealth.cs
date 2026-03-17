@@ -9,6 +9,9 @@ public class PlayerHealth : MonoBehaviour
     public TMP_Text healthText;
     public Slider healthBar;
 
+    public GameOverMenu gameOverMenu;
+    bool isDead = false;
+
     void Start()
     {
         health = initialHealth;
@@ -21,8 +24,9 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int amount)
     {
         Healing(-amount);
-        if (health <= 0)
+        if (health <= 0 && !isDead)
         {
+            isDead = true;
             Die();
         }
     }
@@ -45,9 +49,6 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Player died!");
-        // add your death logic here, e.g.:
-        // SceneManager.LoadScene("GameOver");
-        // gameObject.SetActive(false);
+        gameOverMenu.SetActive(true);
     }
 }
