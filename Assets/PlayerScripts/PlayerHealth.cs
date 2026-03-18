@@ -49,6 +49,9 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
-        gameOverMenu.SetActive(true);
+        //Time.timeScale = 0f; 
+        //gameOverMenu.SetActive(true);
+        Cursor.lockState = CursorLockMode.None; // Unlock cursor for menu interaction
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
     }
 }
