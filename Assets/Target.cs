@@ -3,6 +3,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public float health = 50f;
+    public ParticleSystem deathParticles;
 
     public void TakeDamage(float amount)
     {
@@ -15,6 +16,8 @@ public class Target : MonoBehaviour
 
     void Die()
     {
+        if (deathParticles != null)
+            Instantiate(deathParticles, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

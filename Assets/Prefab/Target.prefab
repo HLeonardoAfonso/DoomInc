@@ -126,3 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Target
   health: 10
+  deathParticles: {fileID: 2811284500194584122, guid: 8ef29630e10f749dcb98b088a30edd1f, type: 3}
