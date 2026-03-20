@@ -1193,7 +1193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &308739052
 Transform:
   m_ObjectHideFlags: 0
@@ -9639,6 +9639,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1355331739}
+  - component: {fileID: 1355331740}
   m_Layer: 0
   m_Name: tool
   m_TagString: Untagged
@@ -9663,6 +9664,21 @@ Transform:
   - {fileID: 1453589342}
   m_Father: {fileID: 1273844509}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1355331740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355331738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa977a10305f43bab7ee20b49c42e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToolSwitcher
+  tools:
+  - {fileID: 308739051}
+  - {fileID: 1453589341}
 --- !u!1 &1374135440
 GameObject:
   m_ObjectHideFlags: 0
@@ -10935,7 +10951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb8ddbf9d7f5462a9b04bd7bc349b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  damageAmount: 20
+  damageAmount: 200
 --- !u!1 &1767816455
 GameObject:
   m_ObjectHideFlags: 0
@@ -11166,7 +11182,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.1837561e+33, y: 1.1153855e-38, z: 2.790706e+29, w: 1.2088831e+33}
+  m_BoundingSphereOverride: {x: 4.64e-43, y: 3.097268e+27, z: 4.7601403e+30, w: 1.5398446e+10}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -11821,8 +11837,8 @@ Transform:
   m_GameObject: {fileID: 2012920888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.387}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1810272969}
@@ -11877,13 +11893,13 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
-  m_VelocityScale: 0
+  m_VelocityScale: 2
   m_LengthScale: 2
   m_SortingFudge: 0
   m_NormalDirection: 1
@@ -12097,8 +12113,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0, g: 0.7202115, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.5928421, b: 0, a: 1}
+      minColor: {r: 1, g: 0.64041394, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.8980392, b: 0.75, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -12684,7 +12700,7 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 0
+      mode: 3
       spread: 0
       speed:
         serializedVersion: 2
@@ -12855,7 +12871,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 15
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -12906,7 +12922,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
       cycleCount: 1
-      repeatInterval: 0.01
+      repeatInterval: 0.1
       probability: 1
   SizeModule:
     enabled: 0
