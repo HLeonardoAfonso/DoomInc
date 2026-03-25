@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public TMP_Text healthText;
     public Slider healthBar;
 
-    public GameOverMenu gameOverMenu;
+    //public GameOverMenu gameOverMenu;
     bool isDead = false;
 
     void Start()
