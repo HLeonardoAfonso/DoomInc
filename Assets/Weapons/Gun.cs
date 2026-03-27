@@ -13,7 +13,7 @@ public class Gun : MonoBehaviour
 
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
-    public GameObject impactEffect;
+    public ParticleSystem impactEffect;
     
     InputAction shootAction;
 
@@ -75,8 +75,9 @@ public class Gun : MonoBehaviour
             {
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
-            GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impactGO, 0.1f);
+            ParticleSystem impaccLoc = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            // GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            // Destroy(impactGO, 0.1f);
         }
     }
 }
