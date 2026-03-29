@@ -13205,7 +13205,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: fb22b47cc7da340639e287ae4f8926f3, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &508124207
 GameObject:
@@ -15363,8 +15363,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   bulletPrefab: {fileID: 8144560019039696591, guid: 41ecc7f4d7cc2488ba3d6783d06a736f, type: 3}
   player: {fileID: 2135803081}
+  firePoint: {fileID: 1393378853}
   shootingCooldown: 0.5
   bulletSpeed: 40
+  lookRadius: 35
 --- !u!1001 &925533007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20610,6 +20612,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379486754}
   m_CullTransparentMesh: 1
+--- !u!4 &1393378853 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8320175610203004418, guid: ed851213f4aa94214b7e8efd8ef98b10, type: 3}
+  m_PrefabInstance: {fileID: 5481637916577791522}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1403747926
 GameObject:
   m_ObjectHideFlags: 0
@@ -38770,6 +38777,18 @@ PrefabInstance:
     - target: {fileID: 6559152852911063567, guid: ed851213f4aa94214b7e8efd8ef98b10, type: 3}
       propertyPath: m_Name
       value: Moving
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320175610203004418, guid: ed851213f4aa94214b7e8efd8ef98b10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320175610203004418, guid: ed851213f4aa94214b7e8efd8ef98b10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320175610203004418, guid: ed851213f4aa94214b7e8efd8ef98b10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
