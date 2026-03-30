@@ -15366,7 +15366,7 @@ MonoBehaviour:
   firePoint: {fileID: 1393378853}
   shootingCooldown: 0.5
   bulletSpeed: 40
-  lookRadius: 35
+  lookRadius: 30
 --- !u!1001 &925533007
 PrefabInstance:
   m_ObjectHideFlags: 0

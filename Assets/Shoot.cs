@@ -49,4 +49,10 @@ public class Shoot : MonoBehaviour
 
         Destroy(bullet, 4f);
     }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
 }
