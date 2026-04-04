@@ -5064,6 +5064,9 @@ GameObject:
   - component: {fileID: 308739052}
   - component: {fileID: 308739053}
   - component: {fileID: 308739054}
+  - component: {fileID: 308739057}
+  - component: {fileID: 308739056}
+  - component: {fileID: 308739055}
   m_Layer: 0
   m_Name: GunTester
   m_TagString: Untagged
@@ -5113,6 +5116,7 @@ MonoBehaviour:
   impactEffect: {fileID: 2811284500194584122, guid: 8ef29630e10f749dcb98b088a30edd1f, type: 3}
   emptyMagazineSound: {fileID: 8300000, guid: 3ab70b60d23054e239c3927b713de87d, type: 3}
   shootSound: {fileID: 8300000, guid: cee781a4ce73a4118ac157c531590efb, type: 3}
+  weaponRecoil: {fileID: 308739056}
 --- !u!82 &308739054
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5210,6 +5214,63 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &308739055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308739051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afded95b462194649bc8978d7b4438cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponSway
+  swayAmount: 0.02
+  maxSwayAmount: 0.06
+  swaySmoothness: 4
+  tiltAmount: 4
+  maxTiltAmount: 8
+  tiltSmoothness: 5
+--- !u!114 &308739056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308739051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fd0c4958eea4b828698de1635e5442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponRecoil
+  kickUpAngle: 3
+  kickSpeed: 20
+  kickRecoverySpeed: 8
+  maxDriftAngle: 15
+  driftSpeed: 0.04
+  driftRecoverySpeed: 5
+--- !u!114 &308739057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308739051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b46aa6d8f104d189cc5a0ca840ee9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponBob
+  characterController: {fileID: 2135803080}
+  fallFloatAmount: 0.05
+  jumpDipAmount: 0.03
+  airSmoothing: 6
+  landingSpeedThreshold: 3
+  landingSlamAmount: 0.08
+  landingSlamMultiplier: 0.015
+  landingSlamSpeed: 25
+  landingRecoverySpeed: 7
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -24968,6 +25029,7 @@ MonoBehaviour:
   impactEffect: {fileID: 0}
   emptyMagazineSound: {fileID: 8300000, guid: 3ab70b60d23054e239c3927b713de87d, type: 3}
   shootSound: {fileID: 8300000, guid: cee781a4ce73a4118ac157c531590efb, type: 3}
+  weaponRecoil: {fileID: 0}
 --- !u!1 &1635136548
 GameObject:
   m_ObjectHideFlags: 0

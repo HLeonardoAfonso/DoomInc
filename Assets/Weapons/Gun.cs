@@ -3,43 +3,41 @@ using UnityEngine.InputSystem;
 
 public class Gun : MonoBehaviour
 {
+    [Header("Gun Stats")]
     public float damage = 10f;
     public float range = 100f;
-    public float bullets = 10f;
-
-    public float fireRate = 15f;
+    public int bullets = 30;
+    public float fireRate = 12f;
     public float impactForce = 30f;
-    private float nextTimeToFire = 0f;
 
+    float nextTimeToFire = 0f;
+
+    [Header("References")]
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
     public ParticleSystem impactEffect;
-    
+    public MouseLook mouseLook;
+
+    [Header("Recoil")]
+    public float recoilUpPerShot = 1.8f;
+
     InputAction shootAction;
+    AudioSource audioSource;
 
     public AudioClip emptyMagazineSound;
     public AudioClip shootSound;
-    private AudioSource audioSource;
+
+    void Awake()
+    {
+        shootAction = new InputAction("Shoot", binding: "<Mouse>/leftButton");
+    }
+
+    void OnEnable() => shootAction.Enable();
+    void OnDisable() => shootAction.Disable();
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-    }
-
-    void Awake()
-    {
-        // Left mouse button binding
-        shootAction = new InputAction("Shoot", binding: "<Mouse>/leftButton");
-    }
-
-    void OnEnable()
-    {
-        shootAction.Enable();
-    }
-
-    void OnDisable()
-    {
-        shootAction.Disable();
     }
 
     void Update()
@@ -47,37 +45,37 @@ public class Gun : MonoBehaviour
         if (shootAction.IsPressed() && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
+
             if (bullets <= 0)
             {
                 audioSource.PlayOneShot(emptyMagazineSound);
-            } else {
-                Shoot();
-                bullets--;
-                audioSource.PlayOneShot(shootSound);
+                return;
             }
+
+            Shoot();
         }
     }
 
     void Shoot()
     {
+        bullets--;
         muzzleFlash.Play();
-        RaycastHit hit;
+        audioSource.PlayOneShot(shootSound);
 
+        // 🔥 vertical recoil only
+        mouseLook.AddRecoil(recoilUpPerShot);
+
+        RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
             Target target = hit.transform.GetComponent<Target>();
             if (target != null)
-            {                
                 target.TakeDamage(damage);
-            }
+
             if (hit.rigidbody != null)
-            {
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
-            }
-            ParticleSystem impaccLoc = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            // GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            // Destroy(impactGO, 0.1f);
+
+            Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
         }
     }
-}
+    }
