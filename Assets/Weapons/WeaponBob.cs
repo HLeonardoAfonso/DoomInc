@@ -1,20 +1,20 @@
 using UnityEngine;
 
-public class WeaponBobPro : MonoBehaviour
+public class WeaponBob : MonoBehaviour
 {
     [Header("References")]
     public CharacterController characterController;
 
     [Header("Airborne Physics")]
-    public float tiltAmount       = 6.0f;
+    public float tiltAmount       = 30f;
     public float airSmoothing     = 5.0f;
     [Range(0, 0.05f)]
     public float verticalWeight   = 0.015f;
 
     [Header("Landing Spring")]
     public float springStrength     = 150f;
-    public float springDamping      = 18f;
-    public float impactSensitivity  = 0.02f;
+    public float springDamping      = 30f;
+    public float impactSensitivity  = 3f;
 
     Vector3    _restPos;
     Quaternion _restRot;
