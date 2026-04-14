@@ -62,7 +62,6 @@ public class Gun : MonoBehaviour
         muzzleFlash.Play();
         audioSource.PlayOneShot(shootSound);
 
-        // 🔥 vertical recoil only
         mouseLook.AddRecoil(recoilUpPerShot);
 
         RaycastHit hit;
