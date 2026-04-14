@@ -5111,7 +5111,7 @@ MonoBehaviour:
   fpsCam: {fileID: 1273844513}
   muzzleFlash: {fileID: 2012920891}
   impactEffect: {fileID: 2811284500194584122, guid: 8ef29630e10f749dcb98b088a30edd1f, type: 3}
-  mouseLook: {fileID: 0}
+  mouseLook: {fileID: 1273844510}
   recoilUpPerShot: 1.8
   emptyMagazineSound: {fileID: 8300000, guid: 3ab70b60d23054e239c3927b713de87d, type: 3}
   shootSound: {fileID: 8300000, guid: cee781a4ce73a4118ac157c531590efb, type: 3}

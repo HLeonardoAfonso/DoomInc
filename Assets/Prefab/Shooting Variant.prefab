@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 5201743259574848975}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.698, y: 1.22845, z: 0.34452}
+  m_LocalPosition: {x: 0.968, y: 1.878, z: 0.34452}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Shoot
   bulletPrefab: {fileID: 8144560019039696591, guid: 41ecc7f4d7cc2488ba3d6783d06a736f, type: 3}
   player: {fileID: 0}
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 9041286208156802474}
   shootingCooldown: 0.5
   bulletSpeed: 30
   lookRadius: 30
