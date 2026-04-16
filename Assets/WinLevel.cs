@@ -9,8 +9,16 @@ public class WinLevel : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Cursor.lockState = CursorLockMode.None;         // Unlock cursor for menu interaction
-            SecondMenu.nextLevelName = nextLevelName;       // Set the next level name for the menu to use
-            UnityEngine.SceneManagement.SceneManager.LoadScene("LevelComplete");
+
+            if (nextLevelName == "WinGame")
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("WinGame");
+            }
+            else
+            {
+                SecondMenu.nextLevelName = nextLevelName;       // Set the next level name for the menu to use
+                UnityEngine.SceneManagement.SceneManager.LoadScene("LevelComplete");
+            }
         }
     }
 }
