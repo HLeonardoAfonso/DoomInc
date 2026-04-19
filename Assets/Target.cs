@@ -14,7 +14,7 @@ public class Target : MonoBehaviour
     [Header("Audio")]
     public AudioClip hurtSound;
     public AudioClip deathSound;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     void Start()
     {

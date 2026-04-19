@@ -231,14 +231,14 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 36
+  Priority: 0
   DopplerLevel: 0
   MinDistance: 1
   MaxDistance: 20000
   Pan2D: 0
   rolloffMode: 2
-  BypassEffects: 0
-  BypassListenerEffects: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
   BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
@@ -575,9 +575,10 @@ MonoBehaviour:
   deathParticles: {fileID: 2250455105573530396, guid: db4933f1b70d948d79a263aa7cbfc367, type: 3}
   itemPrefab: {fileID: 2071215430772666582, guid: 3a7916c73cd9c471aa274a37dc8ba1bc, type: 3}
   dropChance: 1
-  dropOffset: {x: 0, y: 1.3, z: 0}
+  dropOffset: {x: 0, y: 0, z: 0}
   hurtSound: {fileID: 8300000, guid: d844272fcbe1445c1b91c5457ba703f5, type: 3}
   deathSound: {fileID: 8300000, guid: ae186d48a05954a96bac1a37ab202309, type: 3}
+  audioSource: {fileID: 8170385272579122283}
 --- !u!114 &412731246795179455
 MonoBehaviour:
   m_ObjectHideFlags: 0

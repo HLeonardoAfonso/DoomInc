@@ -5008,6 +5008,10 @@ PrefabInstance:
       propertyPath: lookRadius
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 2469280998204955734, guid: ed851213f4aa94214b7e8efd8ef98b10, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1969293711}
     - target: {fileID: 5192394267347611486, guid: ed851213f4aa94214b7e8efd8ef98b10, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.7604144
@@ -5193,6 +5197,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 378583733}
     m_Modifications:
+    - target: {fileID: 1850321453750911483, guid: 1caa3021585c04ae9820c624923d2aea, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2475359062994777347, guid: 1caa3021585c04ae9820c624923d2aea, type: 3}
       propertyPath: player
       value: 
@@ -21071,6 +21079,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4798328652889135634, guid: c9df5a225b979441ebbd5a31e261227b, type: 3}
   m_PrefabInstance: {fileID: 1342639909}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1515977371 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8170385272579122283, guid: ed851213f4aa94214b7e8efd8ef98b10, type: 3}
+  m_PrefabInstance: {fileID: 1877632716}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1541305861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22385,6 +22398,10 @@ PrefabInstance:
       propertyPath: lookRadius
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 2469280998204955734, guid: ed851213f4aa94214b7e8efd8ef98b10, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1515977371}
     - target: {fileID: 5192394267347611486, guid: ed851213f4aa94214b7e8efd8ef98b10, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.3069918
@@ -24521,6 +24538,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!82 &1969293711 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8170385272579122283, guid: ed851213f4aa94214b7e8efd8ef98b10, type: 3}
+  m_PrefabInstance: {fileID: 287421338}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1970480627
 Mesh:
   m_ObjectHideFlags: 0
