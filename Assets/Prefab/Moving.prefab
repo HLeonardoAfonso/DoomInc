@@ -573,7 +573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Target
   health: 50
   deathParticles: {fileID: 2250455105573530396, guid: db4933f1b70d948d79a263aa7cbfc367, type: 3}
-  itemPrefab: {fileID: 2071215430772666582, guid: 3a7916c73cd9c471aa274a37dc8ba1bc, type: 3}
+  itemPrefab: {fileID: 2071215430772666582, guid: d2e858a4708da4ae1a50d45bf0822062, type: 3}
   dropChance: 1
   dropOffset: {x: 0, y: 0, z: 0}
   hurtSound: {fileID: 8300000, guid: d844272fcbe1445c1b91c5457ba703f5, type: 3}
