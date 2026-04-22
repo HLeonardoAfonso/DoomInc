@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,7 +10,12 @@ public class PlayerHealth : MonoBehaviour
     public TMP_Text healthText;
     public Slider healthBar;
 
-    //public GameOverMenu gameOverMenu;
+    [Header("Damage Flash")]
+    public Image damageFlashImage;
+    public float flashAlpha = 0.4f;
+    public float flashDuration = 0.3f;
+    Coroutine flashCoroutine;
+
     bool isDead = false;
 
     void Start()
@@ -18,12 +24,15 @@ public class PlayerHealth : MonoBehaviour
         healthBar.minValue = 0;
         healthBar.maxValue = initialHealth;
         healthBar.value = health;
+
         UpdateHealthUI();
     }
 
     public void TakeDamage(int amount)
     {
         Healing(-amount);
+        TriggerDamageFlash();
+
         if (health <= 0 && !isDead)
         {
             isDead = true;
@@ -38,20 +47,46 @@ public class PlayerHealth : MonoBehaviour
         UpdateHealthUI();
     }
 
+    void TriggerDamageFlash()
+    {
+        if (damageFlashImage == null) return;
+
+        // Stop any ongoing flash before starting a new one
+        if (flashCoroutine != null) StopCoroutine(flashCoroutine);
+
+        flashCoroutine = StartCoroutine(FlashRoutine());
+    }
+
+    IEnumerator FlashRoutine()
+    {
+        damageFlashImage.color = new Color(1f, 0f, 0f, flashAlpha);
+
+        // Fade out
+        float elapsed = 0f;
+        while (elapsed < flashDuration)
+        {
+            elapsed += Time.deltaTime;
+            float alpha = Mathf.Lerp(flashAlpha, 0f, elapsed / flashDuration);
+            damageFlashImage.color = new Color(1f, 0f, 0f, alpha);
+            yield return null;
+        }
+
+        // Ensure fully transparent at the end
+        damageFlashImage.color = new Color(1f, 0f, 0f, 0f);
+    }
+
     void UpdateHealthUI()
     {
         if (healthText != null)
             healthText.text = $"HP: {health}/{initialHealth}";
 
         if (healthBar != null)
-            healthBar.value = health / initialHealth;  // 0 to 1
+            healthBar.value = (float)health / initialHealth;  // Fixed: cast to float
     }
 
     void Die()
     {
-        //Time.timeScale = 0f; 
-        //gameOverMenu.SetActive(true);
-        Cursor.lockState = CursorLockMode.None; // Unlock cursor for menu interaction
+        Cursor.lockState = CursorLockMode.None;
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
     }
 }
