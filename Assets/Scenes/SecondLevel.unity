@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: a3d4eb102918846968ab1abddaafa9b8, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 0624025b4c8134c6b9db2a976ab89be0, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -2227,6 +2227,17 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &507062852 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2682110663999842431, guid: 70323cdb8bda9448c86c740e45e374bd, type: 3}
+  m_PrefabInstance: {fileID: 1310475053}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &510508239
 GameObject:
   m_ObjectHideFlags: 0
@@ -4770,7 +4781,7 @@ Transform:
   m_GameObject: {fileID: 832575517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -432.6, y: 0, z: -54.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7004,6 +7015,17 @@ Transform:
   - {fileID: 516523612}
   m_Father: {fileID: 1864525189}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1271125514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 34819806625154082, guid: 70323cdb8bda9448c86c740e45e374bd, type: 3}
+  m_PrefabInstance: {fileID: 1310475053}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!4 &1273678462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8351392660161573619, guid: 1caa3021585c04ae9820c624923d2aea, type: 3}
@@ -8619,7 +8641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2071215430772666582, guid: c9df5a225b979441ebbd5a31e261227b, type: 3}
       propertyPath: m_Name
-      value: WinItem (1)
+      value: WinItem
       objectReference: {fileID: 0}
     - target: {fileID: 4798328652889135634, guid: c9df5a225b979441ebbd5a31e261227b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8896,6 +8918,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1058121753761921158, guid: a4bdc8ea6e7c04fddb800ba5f2fc4b7b, type: 3}
+      propertyPath: amoText
+      value: 
+      objectReference: {fileID: 507062852}
+    - target: {fileID: 1058121753761921158, guid: a4bdc8ea6e7c04fddb800ba5f2fc4b7b, type: 3}
+      propertyPath: currentGun
+      value: 
+      objectReference: {fileID: 514546688}
     - target: {fileID: 1458992587178533382, guid: a4bdc8ea6e7c04fddb800ba5f2fc4b7b, type: 3}
       propertyPath: 'tools.Array.data[0]'
       value: 
@@ -8904,6 +8934,14 @@ PrefabInstance:
       propertyPath: 'tools.Array.data[1]'
       value: 
       objectReference: {fileID: 770397225}
+    - target: {fileID: 2904458338357523534, guid: a4bdc8ea6e7c04fddb800ba5f2fc4b7b, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1931180657}
+    - target: {fileID: 2904458338357523534, guid: a4bdc8ea6e7c04fddb800ba5f2fc4b7b, type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 1271125514}
     - target: {fileID: 2904458338357523534, guid: a4bdc8ea6e7c04fddb800ba5f2fc4b7b, type: 3}
       propertyPath: damageFlashImage
       value: 
@@ -9198,6 +9236,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8351392660161573619, guid: 1caa3021585c04ae9820c624923d2aea, type: 3}
   m_PrefabInstance: {fileID: 1910279248}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1931180657 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7471436708269768602, guid: 70323cdb8bda9448c86c740e45e374bd, type: 3}
+  m_PrefabInstance: {fileID: 1310475053}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!43 &1950826707
 Mesh:
   m_ObjectHideFlags: 0

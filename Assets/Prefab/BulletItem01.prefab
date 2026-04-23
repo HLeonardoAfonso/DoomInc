@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4798328652889135634}
   - component: {fileID: 6931705141008564756}
   - component: {fileID: 2742890391103410867}
-  - component: {fileID: 7651977873331032774}
   - component: {fileID: 6655575203717177186}
+  - component: {fileID: 2625561167598388331}
   m_Layer: 0
   m_Name: BulletItem01
   m_TagString: Untagged
@@ -56,7 +56,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &2742890391103410867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,20 +72,6 @@ MonoBehaviour:
   floatHeight: 0.5
   floatSpeed: 2
   rotationSpeed: 90
---- !u!114 &7651977873331032774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071215430772666582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7dde013aeff46a990d09a2ee7c7173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthPickup
-  healthAmount: 25
-  pickUpSound: {fileID: 8300000, guid: 052f36fcebf36495a91d23d993d177e6, type: 3}
 --- !u!82 &6655575203717177186
 AudioSource:
   m_ObjectHideFlags: 0
@@ -183,6 +169,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2625561167598388331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071215430772666582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b0c3b9fba5546c287431d299866b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AmmoPickup
+  ammoAmount: 10
 --- !u!1 &4405584318396942397
 GameObject:
   m_ObjectHideFlags: 0

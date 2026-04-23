@@ -105,6 +105,10 @@ PrefabInstance:
       propertyPath: lookRadius
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 1978731982043754479, guid: ed851213f4aa94214b7e8efd8ef98b10, type: 3}
+      propertyPath: m_Speed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2469280998204955734, guid: ed851213f4aa94214b7e8efd8ef98b10, type: 3}
       propertyPath: itemPrefab
       value: 

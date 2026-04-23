@@ -205,6 +205,9 @@ MonoBehaviour:
   health: 0
   healthText: {fileID: 0}
   healthBar: {fileID: 0}
+  damageFlashImage: {fileID: 0}
+  flashAlpha: 0.4
+  flashDuration: 0.3
 --- !u!1 &1358884036220431667
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +219,6 @@ GameObject:
   - component: {fileID: 6543622913845982646}
   - component: {fileID: 1458992587178533382}
   - component: {fileID: 1058121753761921158}
-  - component: {fileID: 1285727226053535351}
   m_Layer: 0
   m_Name: tool
   m_TagString: Untagged
@@ -270,25 +272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AmmoUI
   amoText: {fileID: 0}
   currentGun: {fileID: 0}
---- !u!114 &1285727226053535351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358884036220431667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b46aa6d8f104d189cc5a0ca840ee9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeaponBob
-  characterController: {fileID: 0}
-  tiltAmount: 6
-  airSmoothing: 5
-  verticalWeight: 0.015
-  springStrength: 150
-  springDamping: 18
-  impactSensitivity: 0.02
 --- !u!1 &4832221742356095561
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24ec0a5b2c714fba8e8f09a9f7c3c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  mouseSensitivity: 200
+  mouseSensitivity: 160
   playerBody: {fileID: 1005234459198598560}
   recoilReturnSpeed: 8
   recoilSnappiness: 20

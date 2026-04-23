@@ -38,6 +38,8 @@ public class Target : MonoBehaviour
             Instantiate(deathParticles, transform.position, Quaternion.identity);
         if (itemPrefab != null)
             Instantiate(itemPrefab, transform.position + dropOffset, Quaternion.identity);
+        if (TargetUI.Instance != null)
+            TargetUI.Instance.RegisterKill();
         Destroy(gameObject);
     }
 }
