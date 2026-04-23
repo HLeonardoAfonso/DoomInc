@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4104916898216968327}
   - component: {fileID: 1812424133925688844}
   - component: {fileID: 2904458338357523534}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 6543622913845982646}
   - component: {fileID: 1458992587178533382}
   - component: {fileID: 1058121753761921158}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 5815664331014580089}
   - component: {fileID: 5240138939695962734}
   - component: {fileID: 5878603275365099692}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3111083496474179443}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 6696487053171776720}
   - component: {fileID: 9072868953344036080}
   - component: {fileID: 1756963480951626746}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FPcamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,9 +556,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6543622913845982646}
     m_Modifications:
+    - target: {fileID: 1818932030296069421, guid: 0255bb2af5e534236811720989900456, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2133356423610522029, guid: 0255bb2af5e534236811720989900456, type: 3}
       propertyPath: m_Name
       value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133356423610522029, guid: 0255bb2af5e534236811720989900456, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292830677842333094, guid: 0255bb2af5e534236811720989900456, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3675817011354805627, guid: 0255bb2af5e534236811720989900456, type: 3}
       propertyPath: m_LocalPosition.x
@@ -600,6 +612,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4838924512277239452, guid: 0255bb2af5e534236811720989900456, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616536256691413045, guid: 0255bb2af5e534236811720989900456, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7132131773262560607, guid: 0255bb2af5e534236811720989900456, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848251430119088208, guid: 0255bb2af5e534236811720989900456, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8167795100099587817, guid: 0255bb2af5e534236811720989900456, type: 3}
       propertyPath: fpsCam
       value: 
@@ -615,6 +643,14 @@ PrefabInstance:
     - target: {fileID: 8167795100099587817, guid: 0255bb2af5e534236811720989900456, type: 3}
       propertyPath: recoilUpPerShot
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9137857493902655266, guid: 0255bb2af5e534236811720989900456, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215569052600094649, guid: 0255bb2af5e534236811720989900456, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -639,18 +675,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6543622913845982646}
     m_Modifications:
+    - target: {fileID: 2032762719920533651, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3413768048727233006, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
       propertyPath: m_Name
       value: MachineGun
       objectReference: {fileID: 0}
     - target: {fileID: 3413768048727233006, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3413768048727233006, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596266604720352165, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5323591674752124619, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
       propertyPath: characterController
       value: 
       objectReference: {fileID: 4104916898216968327}
+    - target: {fileID: 5394767276782691058, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5692867466243350691, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
       propertyPath: fpsCam
       value: 
@@ -659,6 +711,22 @@ PrefabInstance:
       propertyPath: mouseLook
       value: 
       objectReference: {fileID: 1756963480951626746}
+    - target: {fileID: 6421543469840414896, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493380416274858872, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033983488634609187, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081788937723150619, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7668667209615462529, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
