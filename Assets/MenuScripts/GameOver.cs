@@ -4,7 +4,7 @@ public class GameOverMenu : MonoBehaviour
 {
     public void RestartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("FirstLevel");
     }
 
     public void MainMenu()
