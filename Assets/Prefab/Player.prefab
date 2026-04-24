@@ -633,6 +633,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2064291411128722918}
     - target: {fileID: 8167795100099587817, guid: 0255bb2af5e534236811720989900456, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167795100099587817, guid: 0255bb2af5e534236811720989900456, type: 3}
       propertyPath: mouseLook
       value: 
       objectReference: {fileID: 1756963480951626746}
@@ -689,7 +693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3413768048727233006, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4596266604720352165, guid: 8cf26e8d88d0446e7ad86813913d7ac6, type: 3}
       propertyPath: m_Layer
