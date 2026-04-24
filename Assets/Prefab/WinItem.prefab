@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7651977873331032774}
   - component: {fileID: 6655575203717177186}
   - component: {fileID: 1936560489474609126}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WinItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af52e3722842e4b12ac98b9f43084c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextLevelName: 
 --- !u!1 &4405584318396942397
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9134738655831918336}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +240,7 @@ GameObject:
   - component: {fileID: 8860802212186583379}
   - component: {fileID: 2934525012609788825}
   - component: {fileID: 4903748897475565215}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

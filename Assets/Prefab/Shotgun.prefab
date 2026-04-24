@@ -169,6 +169,9 @@ MonoBehaviour:
   muzzleFlash: {fileID: 41569636736044034}
   impactEffect: {fileID: 0}
   mouseLook: {fileID: 0}
+  itemMask:
+    serializedVersion: 2
+    m_Bits: 0
   recoilUpPerShot: 5
   emptyMagazineSound: {fileID: 8300000, guid: 3ab70b60d23054e239c3927b713de87d, type: 3}
   shootSound: {fileID: 8300000, guid: cee781a4ce73a4118ac157c531590efb, type: 3}

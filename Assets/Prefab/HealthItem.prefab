@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2742890391103410867}
   - component: {fileID: 7651977873331032774}
   - component: {fileID: 6655575203717177186}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HealthItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9134738655831918336}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,9 +263,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1433866408738012953, guid: f867be36896f1465f9525ca793876f6b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023037358351157861, guid: f867be36896f1465f9525ca793876f6b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137748267547912721, guid: f867be36896f1465f9525ca793876f6b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658962066518363047, guid: f867be36896f1465f9525ca793876f6b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4798994436637866035, guid: f867be36896f1465f9525ca793876f6b, type: 3}
       propertyPath: m_Name
       value: Object (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798994436637866035, guid: f867be36896f1465f9525ca793876f6b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206559242062677141, guid: f867be36896f1465f9525ca793876f6b, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

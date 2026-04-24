@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7651977873331032774}
   - component: {fileID: 6655575203717177186}
   - component: {fileID: 9127757892479519478}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ENDItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9134738655831918336}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 8860802212186583379}
   - component: {fileID: 2934525012609788825}
   - component: {fileID: 4903748897475565215}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
